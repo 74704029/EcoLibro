@@ -9,10 +9,6 @@
     background-color: #CFFFED;
 }
 
-body{
-    background-image: ('/img/png-clipart-line-circle-circle-white-circle-removebg-preview.png');
-}
-
 /*nav*/
 
 .hed1{
@@ -92,9 +88,28 @@ body{
 
 /*Pagina de inicio*/
 
+.bnvi{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .bnv {
+    flex: 1;
+    padding: 20px;
     text-align: center;
     margin-top: 100px;
+}
+
+.imbnv{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.imbnv img{
+    max-width: 100%;
+    height: auto;
 }
 .pr1{
     margin-bottom: 20px;
