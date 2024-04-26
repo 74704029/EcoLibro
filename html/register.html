@@ -4,57 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse - Ecolibros</title>
+    <script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <img src="../img/logo-sin_fondo.ico" alt="">
-
-            <form action="" method="">
-                <h1 class="titulo-formulario">¡Crea una cuenta!</h1>
-                <h2 class="titulo-form">Empecemos</h2>
-                <br>
-                <div class="input-group mb-3">
-                    <input type="text" name="" class="form-control" placeholder="Nombres" required>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" name="" class="form-control" placeholder="Apellidos" required>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="email" name="" class="form-control" placeholder="Correo electrónico" required>
-                </div>
-                <div class="input-group mb-3">
-                    <input type="password" name="" class="form-control" placeholder="Contraseña" required>
-                </div>
-
-                <br>
-
-                <input type="submit" value="Solicitar" class="boton">
-            </form>
-
-          </div>
-          <div class="col-6">
-            <img src="../img/libros_amontonados.png" alt="">
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div>
+            <img src="../img/logo-sin_fondo.ico" alt="" class="logo-principal">
         </div>
-      </div>
+        <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <h1>ECOLIBRO</h1>
+              </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="content-wrapper"> <!-- Wrapper para el contenido principal -->
+        <main class="container mt-5"> <!-- Cambiado de article a main -->
+            <section class="row">
+                <section class="col-md-6">
+                    <form action="" >
+                        <h1 class="titulo-formulario">Crear una cuenta</h1>
+                        <h2 class="titulo-form">¡Empecemos!</h2>
+                        <br>
+                        <div class="input-group mb-3">
+                            <input type="text" name="" class="form-control" placeholder="Nombres" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" name="" class="form-control" placeholder="Apellidos" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="email" name="" class="form-control" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="tel" name="" class="form-control" placeholder="Contraseña" required>
+                        </div>
 
-     <!--<div class="container">
-        <h2>Registrarse</h2>
-        <form action="register.php" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" class="btn">Registrarse</button>
-        </form>
-    </div> -->
+                        <input type="submit" value="Registrarse" class="boton-1">
+                        <br><br>    
+                        <input type="submit" value="Continue con email" class="boton-2">
+                    </form>
+                </section>
+                <section class="col-md-4">
+                    <img src="../img/libros_amontonados.png" alt="">
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <!-- PIE DE PAGINA -->
+    <footer class="footer-container">
+        <div class="redes">
+            <img src="../img/logo-sin_fondo.ico" alt="" class="logo-secundario">
+            <div class="social">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <ul class="politicas">
+            <li class="menu">Legal</li>
+            <li class="menu">Cookies</li>
+            <li class="menu">Privacy</li>
+            <li class="menu">Shipping</li>
+            <li class="menu">Refunds</li>
+        </ul>
+        <span class="copyright">2024, Instituto Certus. All rights reserved.</span>
+    </footer>
+
 </body>
 </html>

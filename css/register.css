@@ -1,16 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+body {
+    background-color: #03AB87;
+    margin-bottom: 150px; /* Ajusta el margen inferior del cuerpo para dejar espacio para el footer */
+}
 
-.boton{
-    padding: 0 0 0 200px;
+.logo-principal {
+    width: 150px;
+}
+
+h1 {
+    color: white;
+}
+
+form {
+    padding-right: 250px; 
+}
+
+.content-wrapper {
+    margin-bottom: 3rem; /* Ajusta el margen inferior del contenido principal */
+}
+
+.footer-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #4F7542;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.logo-secundario {
+    height: 80px; 
+    margin-bottom: 1rem;
+}
+
+.social, .politicas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.redes {
     text-align: center;
 }
 
-*{
-    box-sizing: border-box;
+.menu {
+    margin: 0 1rem; 
+    color: #fff; 
+}
 
-    font-family: "Fira Sans", sans-serif;
-    padding: 0;
-    margin: 0;
+.copyrigth {
+    color: #fff; 
+}
+
+.social a {
+    margin: 0 1rem;
+    font-size: 1.5em;
+}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
     background-color: #03AB87;
+    margin-bottom: 150px; /* Ajusta el margen inferior del cuerpo para dejar espacio para el footer */
+}
+
+.logo-principal {
+    width: 150px;
+}
+
+h1 {
+    color: white;
+}
+
+form {
+    padding-right: 250px; 
+}
+
+.content-wrapper {
+    margin-bottom: 3rem; /* Ajusta el margen inferior del contenido principal */
+}
+
+.footer-container {
+    width: 100%;
+    position: fixed;
+    margin-top: 10px;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: #4F7542;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.logo-secundario {
+    height: 80px; 
+    margin-bottom: 1rem;
+}
+
+.social, .politicas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.redes {
+    text-align: center;
+}
+
+.menu {
+    margin: 0 1rem; 
+    color: #fff; 
+}
+
+.copyrigth {
+    color: #fff; 
+}
+
+.social a {
+    margin: 0 1rem;
+    font-size: 1.5em;
+    color: white;
 }
