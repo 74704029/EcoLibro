@@ -2,23 +2,35 @@
 
 body {
     background-color: #03AB87;
-    margin-bottom: 150px; /* Ajusta el margen inferior del cuerpo para dejar espacio para el footer */
+    margin-bottom: 150px;
 }
 
 .logo-principal {
-    width: 150px;
+    width: 80px;
+}
+
+.imagen-principal{
+    width: 500px;
+    height: 500px;
+    margin-right: 400px;
+}
+
+.titulo{
+    font-size: 25px;
 }
 
 h1 {
     color: white;
 }
 
-form {
-    padding-right: 250px; 
+h2{
+    color: white;
 }
 
-.content-wrapper {
-    margin-bottom: 3rem; /* Ajusta el margen inferior del contenido principal */
+/*FORMULARIO*/
+
+form {
+    padding-right: 250px; 
 }
 
 .footer-container {
@@ -27,12 +39,12 @@ form {
     bottom: 0;
     left: 0;
     padding: 2rem 8%;
-    background-color: #4F7542;
+    background-color: #333333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 50rem;
 }
 
 .logo-secundario {
@@ -64,73 +76,142 @@ form {
 .social a {
     margin: 0 1rem;
     font-size: 1.5em;
-}
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-body {
-    background-color: #03AB87;
-    margin-bottom: 150px; /* Ajusta el margen inferior del cuerpo para dejar espacio para el footer */
-}
-
-.logo-principal {
-    width: 150px;
-}
-
-h1 {
     color: white;
 }
 
-form {
-    padding-right: 250px; 
+.col-md-4{
+    position: relative;
 }
 
-.content-wrapper {
-    margin-bottom: 3rem; /* Ajusta el margen inferior del contenido principal */
+.col-md-4::after{
+    content: "";
+    position: absolute;
+    right: -380px;
+    top: -70px;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 550px;
+    height: 550px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
 }
 
-.footer-container {
-    width: 100%;
+.boton-1, .boton-2 {
+    background-color: #4E4FEB;
+    color: white;
+    border-radius: 10px; 
+    border: none;
+    padding: 10px 20px; 
+    cursor: pointer;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-size: 16px; 
+    width: 100%; 
+}
+
+.boton-2 {
+    background-color: white;
+    color: black;
+    margin-top: -10px; 
+}
+
+
+/*BARRA DE MENU LATERAL*/
+
+.barra {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    width: 10%;
+    height: 9%;
     position: fixed;
+    transition: .4s all;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.barra div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.barra i {
+    padding-left: 10px;
+}
+
+.barra ul{
+    padding: 0%;
+    text-align: center;
+}
+
+.barra li{
+    transition: .3s all;
+}
+
+.barra a{
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    transition: .3s all;
+    font-size: 0px;
+    padding: 0px;
+}
+
+.barra-titulo{
+    text-align: center;
+    color: white;
+    padding: 7px;
+    padding-bottom: 20px;
+    font-size: 0px;
+}
+
+.barra i{
+    padding-top: 30px;
+    margin-top: 70px;
+    font-size: 34px;
+    margin-left: 20px;
+}
+
+.barra:hover{
+    width: 15%;
+    height: 100%;
+    background-color: #404040;
+}
+
+.barra:hover .barra-titulo{
+    padding: 15px;
+    font-size: 35px;
+}
+
+.barra:hover a{
+    font-size: 20px;
+    color: white;
+    display: block;
+    padding: 20px;
+}
+
+.barra:hover i{
+    height: 0px;
+}
+
+.barra:hover li{
     margin-top: 10px;
-    bottom: 0;
-    left: 0;
-    padding: 2rem 8%;
-    background-color: #4F7542;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 3rem;
+    border-top: 1px solid black;
+    width: 100%;
 }
 
-.logo-secundario {
-    height: 80px; 
-    margin-bottom: 1rem;
+.barra:hover ul:last-of-type{
+    border-bottom: 1px solid black;
+    padding-top: 40px;
 }
 
-.social, .politicas {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-
-.redes {
-    text-align: center;
-}
-
-.menu {
-    margin: 0 1rem; 
-    color: #fff; 
-}
-
-.copyrigth {
-    color: #fff; 
-}
-
-.social a {
-    margin: 0 1rem;
-    font-size: 1.5em;
-    color: white;
+.barra:hover a:hover{
+    font-size: 25px;
+    padding: 30px 0px;
+    background-color: #606060;
 }
