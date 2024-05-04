@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros en Oferta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="estilosaylen.css">
+</head>
+<body>
+
+    <header class="encabezado-primera-fila">
+        <nav>
+            <ul class="nav-star">
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR4nO3YsQ3AMAhFQfYf+TekyQIubKPkTqK3EG5eFQDAK0l/aWpVBjzaAuIC+toXAAAAAP4nAzKWIhRJrFXhaIIAAADAIRnQ8SSxSGKtCUYTBAAAapsHnbqSOFeFp0AAAAAASUVORK5CYII="></a></li>
+                <li><a href="#"><img class="logo" src="img/logo.png" alt=""></a></li>
+                <li><a href="#">ECOLIBROS</a></li>
+            </ul>
+            <ul class="nav-end">
+                <li><input class="buscador" type="search" placeholder=" Buscar . . ." id="inputBusqueda"/></li>
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACwUlEQVR4nO2aQYhOURiGvyGxsSOpWTGmLBW2FlPsJMUsLMjCLKTZWihF0lB2imIjSTPGwkIWZlKS7aRkIWGnNAx13fO+F59O9x9dX+Y3mTnn/Jz71Fn9dd5z3vPd95z/nivS0tLS0oCkdmsAvpKcITmiqqskNwP4a5tR1fWSsQHaMWG1ZGyAkhyVXFDVdSTvmVx4KjlRluUmY8A7yQlVXQmADQO+/1c5sBhIvm1Wga8KyQkAT0wQ7pKcIHnb5MAhyQkAF00FnJScIDlqKuCy5IRzbv9fHpqiNgAHghhAcmfqyS2mBdudVHXjP7D6H1S1L5QBK1CfhnrZgIcSEpKvm4LOuUFJCIALxoCx0IKPm4JVVQ0FFfzzeKaMAQeDCpK8ZQSPSCL8sw5g1gTg5qCiAMbMc3dKElGW5UC0AJyH5AljwFVJBIDhqAHocc7tM6L3JZcA9JDcbirgmeQSgB5V3WBEP0ouAdgQdk1hVV0rkfGTNQsxFzwA5yH5yhyGtkpkfLkbA6Ziij8yh6Hd0cQX2I59IEYTJ3nTiB+V9AE4HFP8vNkJTvdAAA5EGwDJ48aAa9kEoMc5t9cM4IFEBMBhoz8tkQewzVTA8xi6/n0EyR32LzmAszH0f+Kvx1O/+GhM/lv0bVjrECp7xIBLkgKSL1NPnuR1f2eZxAAA04lW/L2/qq+qao+khOQNM7hjkhMAzpmVOSM5QXLEVMCk5ATr/bhZAZU/oKjqGskBVe0j+SJFEEqvUFXVUOcjyjwN8PiPJAB8ydYAj/8rCuAKyTc+C7IzwFMURT/JCQCffSN5dyn3hsvdX1CKoui3Lyg6O8Os/y11f8EhOdGlZMdT9xcc1CX62wED+JS6v+Cg+4DnUvcXHJKTXUr2Tur+guOcG1wotJxzW1L3F4Wi3rbG/TPqm1+ppQx2uftraWlpaWlpafH8AOBKc30YnDWvAAAAAElFTkSuQmCC"></a></li>
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADkklEQVR4nO2az29NQRTHJ9RvkRBEy1+AJWHHVhorYl1Jg6poYyPYCmtEaOyEREITofgvmihR7CgLFeLX5X6/t3Lk5I3kOu6rvve8++4wn2SSl/fuzJk5c+b8mPuci0QikUgkEimBJEk2kBwE8IDkJIAv2vzn+/qbPuP+NZIk6SE5AiAjKbM1AN9JXtU+7l8gTdPdAD79aeEFiviYZVmvCxmSR/yONrR4Yw2HXcA7/71gYQ9JHk3TdKOILNMGYBPJIZITBUqYCc4SkiTpsWYPICV5UETm1eunv5E85J/N9/0gIt0uFEheKVj8jrn2z7JsZ4ESLrsQSJJkg5qtMeWDjY5DcsAoIEuSZL0LwfHRnPnZzL4eIjK/wCdU3yGiltDkJ3202bG8Y8xbwZirOiSf5Set3r7ZsXx0yCtz0lUdAJ/zkxaR5c2OpX2NBXx2VQcm/LWogBU2O3RVh+TT//0I3DOTHmp2LJLDxgLuuqpDctAoYKKFMPjIjDXgAkmEMjPxQ42OozG/IBEKo0QmOWJTYU1vW0yFL7lQEJFu9dgF9cDAH4ohNfvDdYqhdS4ksizrrVMOa3o7pB5eQ6Q27+2HC878z3J4lwsR1nZzpoULkZkgHN8cLOFjE4v/EOzOW0RkNYBzc7wU1WdGgroAmStaz6tJ+2Tpieb2vnbQz2MaLoMJdY3gr7q2kzxJcpTkYwDvAdC39/odyVskT5Dc1kzyVMkdB3CG5FQTTvCl9g3iFsgiIqsAXLTxvMlIkAK4oGO6EACwD8B0qwsvUMR0mqZ7XVURkS7d9dnCGslrAPpJbhWRNSKywLc1+p3/7fpsYdNbQ5erEiKyhOSdOpPWF599+kwj4wHYb+8Wcu22iCx2VUBEuooWD+Crpret7JYf+5gfq0gJ812nQbHZvyK55W/J0ONB8nWBks+7Tjs8/r748XYkM/4V+7iVl6bpHtfBUDdtd76dmZx3ls+NFbwRkZWu06aP2jndUoLczdYnlH4UklqGZ5Oc4bLkkzxlFPCt1BoCwFkb6sqMzfqfAusUAZwus7CZMsL7XMnoG2ezCS9KKaBYq+p+yfAaSXL+FiKytOC/R1vbLpi1cjUv9Frbhdafyw0zl+NlCB01FtDfdqH153LAKOBmGUIfl2529eeyzcxlou1CAbzLC9X7PtchRGStsca3bRcKvcP6VQELXYcQkUVGAWmn5hKJRCKRSCQSiURcUPwAQtrmxZduq2sAAAAASUVORK5CYII="></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="position: relative; min-height: 50vh; ">
+
+        
+            <h1 class="title_line2">Libros en Oferta</h1>
+
+
+            <section class="movies container">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_cadahistoriacuenta.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Cada historia cuenta</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>En este libro encontraras la historia detras de cada suceso
+                                    que nos pasa a lo largo de nuestras vidas y como nosotros 
+                                    reaccionamos ante ello.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+                        
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_portadadelibro.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Portada de Libro</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>Este libro te enseñara las caracteristicas principales
+                                    y fundamentales que debe de tener una portada de un 
+                                    libro si piensas escribir uno.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_loshombresdelnorte.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Los hombres del norte</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>Es un libro de muchas emociones, donde encontramos a Max
+                                    un hombre que busca mas de lo que puede tener y que en su 
+                                    busqueda vera la oscuridad.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_laniebladelosbosques.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>La niebla de los Bosques</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>Adentrate a esta historia llena de misterios y sucesos
+                                    inexplicables dentro de un bosque que te enseñara que no
+                                    todo lo que ves es real.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_reyescaidos.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Reyes caidos</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>La caida de Hernaldo es el impulso que Octavio necesitaba
+                                    para brillar sin importarle nada mas que su nuevo gobierno
+                                    lleno de su propia ilusión.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_herederadefuego.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Heredera de fuego</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>Sofia es la joven con la fortuna mas lamentable de todo el 
+                                    pueblo es por ello que vive bajo los escombros de su familia
+                                    que la hunde en su miseria.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_lascavilacionesdelsrEinstein.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Las cavilaciones del Sr. Einstein</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>El Sr. Einstein esta en un cuarto oscuro con una lampara a su 
+                                    costado mientras el se apoya en su mano pensando en como terminara 
+                                    el sentido de su vida o si ya lo perdio.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img-person">
+                                <img src="img/libro_lasvidasdentrodetucabeza.jpg" alt="">
+                            </div>
+                            <div class="content-recomend">
+                                <h3>Las vidas dentro de tu cabeza</h3>
+                                <span class="plan-recomend">S/12  <span class="oferta-roja"> S/21</span> </span>
+                                <p>El cerebro es tan inexplicable que no podemos asegurar ser dueños
+                                    de su absoluto control, como podriamos siendo nosotros tan irracionales
+                                    y impulsivos.</p>
+                                    <button class="btn_recomend">Comprar</button>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </section>
+                <div class="cuadro"></div>
+
+                <div class="custom-shape-divider-bottom-1714417935"> 
+                    <svg data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120 " preserveAspectRatio="none"> 
+                        <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path> 
+                    </svg> 
+                </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="scriptaylen.js"></script>
+
+</body>
+</html>
