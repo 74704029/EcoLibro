@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas vendidos y sugerencias</title>
+    <link rel="stylesheet" href="estilosaylen.css">
+</head>
+<body>
+
+    <header class="encabezado-primera-fila">
+        <nav>
+            <ul class="nav-star">
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAWUlEQVR4nO3YsQ3AMAhFQfYf+TekyQIubKPkTqK3EG5eFQDAK0l/aWpVBjzaAuIC+toXAAAAAP4nAzKWIhRJrFXhaIIAAADAIRnQ8SSxSGKtCUYTBAAAapsHnbqSOFeFp0AAAAAASUVORK5CYII="></a></li>
+                <li><a href="#"><img class="logo" src="img/logo.png" alt=""></a></li>
+                <li><a href="#">ECOLIBROS</a></li>
+            </ul>
+            <ul class="nav-end">
+                <li><input class="buscador" type="search" placeholder=" Buscar . . ." id="inputBusqueda"/></li>
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACwUlEQVR4nO2aQYhOURiGvyGxsSOpWTGmLBW2FlPsJMUsLMjCLKTZWihF0lB2imIjSTPGwkIWZlKS7aRkIWGnNAx13fO+F59O9x9dX+Y3mTnn/Jz71Fn9dd5z3vPd95z/nivS0tLS0oCkdmsAvpKcITmiqqskNwP4a5tR1fWSsQHaMWG1ZGyAkhyVXFDVdSTvmVx4KjlRluUmY8A7yQlVXQmADQO+/1c5sBhIvm1Wga8KyQkAT0wQ7pKcIHnb5MAhyQkAF00FnJScIDlqKuCy5IRzbv9fHpqiNgAHghhAcmfqyS2mBdudVHXjP7D6H1S1L5QBK1CfhnrZgIcSEpKvm4LOuUFJCIALxoCx0IKPm4JVVQ0FFfzzeKaMAQeDCpK8ZQSPSCL8sw5g1gTg5qCiAMbMc3dKElGW5UC0AJyH5AljwFVJBIDhqAHocc7tM6L3JZcA9JDcbirgmeQSgB5V3WBEP0ouAdgQdk1hVV0rkfGTNQsxFzwA5yH5yhyGtkpkfLkbA6Ziij8yh6Hd0cQX2I59IEYTJ3nTiB+V9AE4HFP8vNkJTvdAAA5EGwDJ48aAa9kEoMc5t9cM4IFEBMBhoz8tkQewzVTA8xi6/n0EyR32LzmAszH0f+Kvx1O/+GhM/lv0bVjrECp7xIBLkgKSL1NPnuR1f2eZxAAA04lW/L2/qq+qao+khOQNM7hjkhMAzpmVOSM5QXLEVMCk5ATr/bhZAZU/oKjqGskBVe0j+SJFEEqvUFXVUOcjyjwN8PiPJAB8ydYAj/8rCuAKyTc+C7IzwFMURT/JCQCffSN5dyn3hsvdX1CKoui3Lyg6O8Os/y11f8EhOdGlZMdT9xcc1CX62wED+JS6v+Cg+4DnUvcXHJKTXUr2Tur+guOcG1wotJxzW1L3F4Wi3rbG/TPqm1+ppQx2uftraWlpaWlpafH8AOBKc30YnDWvAAAAAElFTkSuQmCC"></a></li>
+                <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADkklEQVR4nO2az29NQRTHJ9RvkRBEy1+AJWHHVhorYl1Jg6poYyPYCmtEaOyEREITofgvmihR7CgLFeLX5X6/t3Lk5I3kOu6rvve8++4wn2SSl/fuzJk5c+b8mPuci0QikUgkEimBJEk2kBwE8IDkJIAv2vzn+/qbPuP+NZIk6SE5AiAjKbM1AN9JXtU+7l8gTdPdAD79aeEFiviYZVmvCxmSR/yONrR4Yw2HXcA7/71gYQ9JHk3TdKOILNMGYBPJIZITBUqYCc4SkiTpsWYPICV5UETm1eunv5E85J/N9/0gIt0uFEheKVj8jrn2z7JsZ4ESLrsQSJJkg5qtMeWDjY5DcsAoIEuSZL0LwfHRnPnZzL4eIjK/wCdU3yGiltDkJ3202bG8Y8xbwZirOiSf5Set3r7ZsXx0yCtz0lUdAJ/zkxaR5c2OpX2NBXx2VQcm/LWogBU2O3RVh+TT//0I3DOTHmp2LJLDxgLuuqpDctAoYKKFMPjIjDXgAkmEMjPxQ42OozG/IBEKo0QmOWJTYU1vW0yFL7lQEJFu9dgF9cDAH4ohNfvDdYqhdS4ksizrrVMOa3o7pB5eQ6Q27+2HC878z3J4lwsR1nZzpoULkZkgHN8cLOFjE4v/EOzOW0RkNYBzc7wU1WdGgroAmStaz6tJ+2Tpieb2vnbQz2MaLoMJdY3gr7q2kzxJcpTkYwDvAdC39/odyVskT5Dc1kzyVMkdB3CG5FQTTvCl9g3iFsgiIqsAXLTxvMlIkAK4oGO6EACwD8B0qwsvUMR0mqZ7XVURkS7d9dnCGslrAPpJbhWRNSKywLc1+p3/7fpsYdNbQ5erEiKyhOSdOpPWF599+kwj4wHYb+8Wcu22iCx2VUBEuooWD+Crpret7JYf+5gfq0gJ812nQbHZvyK55W/J0ONB8nWBks+7Tjs8/r748XYkM/4V+7iVl6bpHtfBUDdtd76dmZx3ls+NFbwRkZWu06aP2jndUoLczdYnlH4UklqGZ5Oc4bLkkzxlFPCt1BoCwFkb6sqMzfqfAusUAZwus7CZMsL7XMnoG2ezCS9KKaBYq+p+yfAaSXL+FiKytOC/R1vbLpi1cjUv9Frbhdafyw0zl+NlCB01FtDfdqH153LAKOBmGUIfl2529eeyzcxlou1CAbzLC9X7PtchRGStsca3bRcKvcP6VQELXYcQkUVGAWmn5hKJRCKRSCQSiURcUPwAQtrmxZduq2sAAAAASUVORK5CYII="></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    
+    <section class="ven-suge">
+
+        <h1 class="title_line2">MAS VENDIDOS</h1>
+
+        <section class="container-vensuge">
+
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_mataraunruiseñor.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/16</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_abookaimages.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/15</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_losojosdelotro.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/22</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_elsuperviviente.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/19</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_1984.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/25</h2>                                                       
+                </div> 
+            </div>
+        
+        </section>
+
+        <h4 class="title_line1">—LAS MEJORES—</h4>
+        <h1 class="title_line2">SUGERENCIAS DEL MES</h1>
+
+
+        <section class="container-vensuge">
+
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_aliciaenelpaisdelasmaravillas.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/16</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_elgeneralensulaberinto.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/15</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_catcherintheray.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/22</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_lahistoriaenlaedadmedia.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/19</h2>                                                       
+                </div> 
+            </div>
+            <div class="primer-nivel">
+                <div class="imagen">
+                    <img src="img/libro_laperpectivanostalgia.jpg" alt="">
+                </div>
+                <div class="titulo">
+                    <h2>S/25</h2>                                                       
+                </div> 
+            </div>
+        
+        </section>
+
+    </section>
+
+</body>
+</html>
